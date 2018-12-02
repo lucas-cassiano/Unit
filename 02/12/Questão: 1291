@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(int argc, char**argv) {
+    int matriz[3][3];
+    int i, j;
+    int soma = 0;
+
+    srand( time( NULL ) );
+
+    /* gerando a matriz */
+    printf( "Matriz:\n" );
+    for( i = 0; i < 3; i++ ) {
+        for( j = 0; j < 3; j++ ) {
+            matriz[i][j] = 3 + rand() % 3;
+            printf( "%3d", matriz[i][j] );
+        }
+        printf( "\n" );
+    }
+
+    /* fazendo a soma */
+    for( i = 0; i < 3; i++ ) {
+        soma += matriz[i][i];
+    }
+    printf("Soma da diagonal principal: %d", soma);
+
+    return 0;
+}
