@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void EstacaoAno(int dia, int mes){
+        //if para outono
+        if((dia == 21 && mes == 3) || (dia == 22 && mes == 3) || (dia == 23 && mes == 3) || (dia == 24 && mes == 3) || (dia == 25 && mes == 3) || (dia == 26 && mes == 3) || (dia == 27 && mes == 3) || (dia == 28 && mes == 3) || (dia == 29 && mes == 3) || (dia == 30 && mes == 3) || (dia == 31 && mes == 3) || (dia == 1 && mes == 4) || (dia == 2 && mes == 4) || (dia == 3 && mes == 4) || (dia == 4 && mes == 4) || (dia == 5 && mes == 4) || (dia == 6 && mes == 4) || (dia == 7 && mes == 4) || (dia == 8 && mes == 4) || (dia == 9 && mes == 4) || (dia == 10 && mes == 4) || (dia == 11 && mes == 4) || (dia == 12 && mes == 4) || (dia == 13 && mes == 4) || (dia == 14 && mes == 4) || (dia == 15 && mes == 4) || (dia == 16 && mes == 4) || (dia == 17 && mes == 4) || (dia == 18 && mes == 4) || (dia == 19 && mes == 4) || (dia == 20 && mes == 4) || (dia == 21 && mes == 4) || (dia == 22 && mes == 4) || (dia == 23 && mes == 4) || (dia == 24 && mes == 4) || (dia == 25 && mes == 4) || (dia == 26 && mes == 4) || (dia == 27 && mes == 4) || (dia == 28 && mes == 4) || (dia == 29 && mes == 4) || (dia == 30 && mes == 4) || (dia == 1 && mes == 5) || (dia == 2 && mes == 5) || (dia == 3 && mes == 5) || (dia == 4 && mes == 5) || (dia == 5 && mes == 5) || (dia == 6 && mes == 5) || (dia == 7 && mes == 5) || (dia == 8 && mes == 5) || (dia == 9 && mes == 5) || (dia == 10 && mes == 5) || (dia == 11 && mes == 5) || (dia == 12 && mes == 5) || (dia == 13 && mes == 5) || (dia == 14 && mes == 5) || (dia == 15 && mes == 5) || (dia == 16 && mes == 5) || (dia == 17 && mes == 5) || (dia == 18 && mes == 5) || (dia == 19 && mes == 5) || (dia == 20 && mes == 5) || (dia == 21 && mes == 5) || (dia == 22 && mes == 5) || (dia == 23 && mes == 5) || (dia == 24 && mes == 5) || (dia == 25 && mes == 5) || (dia == 26 && mes == 5) || (dia == 27 && mes == 5) || (dia == 28 && mes == 5) || (dia == 29 && mes == 5) || (dia == 30 && mes == 5) || (dia == 31 && mes == 5) || (dia == 1 && mes == 6) || (dia == 2 && mes == 6) || (dia == 3 && mes == 6) || (dia == 4 && mes == 6) || (dia == 5 && mes == 6) || (dia == 6 && mes == 6) || (dia == 7 && mes == 6) || (dia == 8 && mes == 6) || (dia == 9 && mes == 6) || (dia == 10 && mes == 6) || (dia == 11 && mes == 6) || (dia == 12 && mes == 6) || (dia == 13 && mes == 6) || (dia == 14 && mes == 6) || (dia == 15 && mes == 6) || (dia == 16 && mes == 6) || (dia == 17 && mes == 6) || (dia == 18 && mes == 6) || (dia == 19 && mes == 6) || (dia == 20 && mes == 6)){
+            printf("OUTONO");
+        }
+        //if para inverno
+        else if()
+
+}
+
+
+int main(){
+
+    int dia, mes;
+
+    printf("Qual o dia do mes?");
+        scanf("%d", &dia);
+    printf("Qual o mes?");
+        scanf("%d", &mes);
+
+
+    EstacaoAno(dia, mes);
+
+
+	return 0;
+}
