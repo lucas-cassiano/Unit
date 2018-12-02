@@ -1,0 +1,98 @@
+#include <stdio.h>
+#include <math.h>
+
+int printandoMedia2 (int matriz[3][3], int i, int j, int media)
+{
+    if(j == 3)
+    {
+        return media;
+    }
+    media += matriz[i][j];
+    printandoMedia2(matriz,i,j+1,media);
+}
+
+int printandoMedia (int matriz[3][3], int i, int media)
+{
+    if(i == 3)
+    {
+        return media;
+    }
+    media = printandoMedia2(matriz,i,0,media);
+    printandoMedia(matriz,i+1,media);
+}
+
+int achandoMaior2 (int matriz[3][3], int aux, int i, int j)
+{
+    if(j == 3)
+    {
+        return aux;
+    }
+    if(matriz[i][j] > aux)
+    {
+        aux = matriz[i][j];
+    }
+    achandoMaior2(matriz,aux,i,j+1);
+}
+
+void achandoMaior (int matriz[3][3], int aux, int i, int maior[])
+{
+    if(i == 3)
+    {
+        return;
+    }
+    maior[i] = achandoMaior2(matriz,aux,i,0);
+    achandoMaior(matriz,aux,i+1,maior);
+}
+
+void geradorDeMatrizJ (int matriz[3][3], int i, int j)
+{
+    if(j == 3)
+    {
+        return;
+    }
+    scanf("%d",&matriz[i][j]);
+    //printf("%d = linha %d e coluna %d\n",matriz[i][j], i, j);
+    geradorDeMatrizJ(matriz,i,j+1);
+}
+
+void geradorDeMatrizI (int matriz[3][3], int i)
+{
+    if(i == 3)
+    {
+        return;
+    }
+    geradorDeMatrizJ(matriz,i,0);
+    geradorDeMatrizI(matriz,i+1);
+}
+
+
+int main ()
+{
+    int matriz[3][3];
+    int maior[3];
+    double media;
+    geradorDeMatrizI(matriz,0);
+    media = printandoMedia(matriz,0,0);
+    printf("%.2lf ",media/9);
+    achandoMaior(matriz,-99999,0,maior);
+    if(maior[0] >= maior[1] && maior[0] >= maior[2])
+    {
+        if(maior[0] > 0) printf("%d 1",maior[0]);
+        if(maior[0] == 0) printf("%d 0",maior[0]);
+        if(maior[0] < 0) printf("%d -1",maior[0]);
+    }
+    else if(maior[1] >= maior[0] && maior[1] >= maior[2])
+    {
+        if(maior[1] > 0) printf("%d 1",maior[1]);
+        if(maior[1] == 0) printf("%d 0",maior[1]);
+        if(maior[1] < 0) printf("%d -1",maior[1]);
+    }
+    else if(maior[2] >= maior[1] && maior[2] >= maior[0])
+    {
+        if(maior[2] > 0) printf("%d 1",maior[2]);
+        if(maior[2] == 0) printf("%d 0",maior[2]);
+        if(maior[2] < 0) printf("%d -1",maior[2]);
+    }
+    printf(" %d",matriz[0][0] + matriz[1][1] + matriz[2][2]);
+    return 0;
+}
