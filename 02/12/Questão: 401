@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void soma(int n, int total){
+    
+    scanf("%d", &n);
+	
+	if (n < 0)
+		n *= -1;
+	
+	while (n)
+	{
+		total += n%10;
+		
+		n /= 10;
+	}
+	
+	printf("%d\n", total);
+	
+}
+
+
+int main()
+{
+	int n, total = 0;
+	
+	soma(n, total=0);
+	
+	return (0);
+}
